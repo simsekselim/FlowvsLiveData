@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flow vs LiveData</string>
+    <string name="sharedflow">SharedFlow</string>
+    <string name="flow">Flow</string>
+    <string name="stateflow">StateFlow</string>
+    <string name="livedata">LiveData</string>
+</resources>

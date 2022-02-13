@@ -11,83 +11,106 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_livedata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.liveData}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/livedata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/livedata"
-            app:layout_constraintTop_toBottomOf="@id/tv_livedata"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_stateflow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewModel.stateFlow}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/livedata" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/stateflow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/stateflow"
-            app:layout_constraintTop_toBottomOf="@id/tv_stateflow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_flow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/stateflow" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/flow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flow"
-            app:layout_constraintTop_toBottomOf="@id/tv_flow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_sharedflow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sharedflow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/flow" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sharedflow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sharedflow"
-            app:layout_constraintTop_toBottomOf="@id/tv_sharedflow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="match_parent">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_livedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@{viewModel.liveData}"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/livedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/livedata"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_livedata" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_stateflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@{viewModel.stateFlow}"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/livedata" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/stateflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/stateflow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_stateflow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/flow"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stateflow" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/flow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_flow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sharedflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/sharedflow"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flow" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sharedflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/sharedflow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sharedflow" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
